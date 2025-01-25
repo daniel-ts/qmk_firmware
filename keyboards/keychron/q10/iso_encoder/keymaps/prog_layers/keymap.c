@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_INS,             KC_DEL,
         _______,  KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,      KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     DE_SS,    DE_ACUT,  KC_BSPC,            KC_PGUP,
         _______,  KC_TAB,   DE_Q,     DE_W,     DE_E,     DE_R,     DE_T,      DE_Z,     DE_U,     DE_I,     DE_O,     DE_P,     DE_UDIA,  DE_PLUS,                      KC_PGDN,
-        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,      DE_H,     DE_J,     DE_K,     DE_L,     DE_LCBR,  DE_RCBR,  DE_HASH,  KC_ENT,             KC_HOME,
+        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,      DE_H,     DE_J,     DE_K,     DE_L,     DE_LBRC,  DE_RBRC,  DE_HASH,  KC_ENT,             KC_HOME,
         _______,  KC_LSFT,  DE_LABK,  DE_Y,     DE_X,     DE_C,     DE_V,      DE_B,     DE_B,     DE_N,     DE_M,     KC_COMM,  KC_DOT,   DE_MINS,  KC_RSFT,  KC_UP,
         _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,  MO(WIN_FN),                     KC_SPC,             KC_RALT,                      KC_LEFT,  KC_DOWN,  KC_RGHT),
 
@@ -73,4 +73,14 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [WIN_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [WIN_FN]   = { ENCODER_CCW_CW(RM_VALD, RM_VALU) }
 };
+
+const key_override_t left_bracket_override = ko_make_basic(MOD_MASK_SHIFT, DE_LBRC, DE_LCBR);
+const key_override_t right_bracket_override = ko_make_basic(MOD_MASK_SHIFT, DE_RBRC, DE_RCBR);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+	&left_bracket_override,
+    &right_bracket_override
+};
+
 #endif // ENCODER_MAP_ENABLE
