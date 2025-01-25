@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_german.h"
 
 // clang-format off
 
@@ -30,12 +31,12 @@ enum layers{
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MAC_BASE] = LAYOUT_iso_90(
-        KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,         KC_F11,         KC_F12,   KC_INS,             KC_DEL,
-        _______,  KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,      KC_6,     KC_7,     KC_8,     KC_9,     KC_0,           KC_MINS,        KC_EQL,   KC_BSPC,            KC_PGUP,
-        _______,  KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,           KC_LBRC,        KC_RBRC,                      KC_PGDN,
-        _______,  KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_ALGR(KC_8),  KC_ALGR(KC_9),  KC_NUHS,  KC_ENT,             KC_HOME,
-        _______,  KC_LSFT,  KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,     KC_B,     KC_N,     KC_M,     KC_COMM,        KC_DOT,         KC_SLSH,  KC_RSFT,  KC_UP,
-        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,  MO(MAC_FN),                     KC_SPC,             KC_RALT,                                  KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_INS,             KC_DEL,
+        _______,  KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,      KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     DE_SS,    DE_ACUT,  KC_BSPC,            KC_PGUP,
+        _______,  KC_TAB,   DE_Q,     DE_W,     DE_E,     DE_R,     DE_T,      DE_Z,     DE_U,     DE_I,     DE_O,     DE_P,     DE_UDIA,  DE_PLUS,                      KC_PGDN,
+        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,      DE_H,     DE_J,     DE_K,     DE_L,     DE_LCBR,  DE_RCBR,  DE_HASH,  KC_ENT,             KC_HOME,
+        _______,  KC_LSFT,  DE_LABK,  DE_Y,     DE_X,     DE_C,     DE_V,      DE_B,     DE_B,     DE_N,     DE_M,     KC_COMM,  KC_DOT,   DE_MINS,  KC_RSFT,  KC_UP,
+        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,  MO(WIN_FN),                     KC_SPC,             KC_RALT,                      KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [MAC_FN] = LAYOUT_iso_90(
         RM_TOGG,  _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,   RM_VALU,       KC_MPRV,       KC_MPLY,       KC_MNXT,        KC_MUTE,  KC_VOLD,   KC_VOLU,  _______,            _______,
@@ -48,10 +49,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [WIN_BASE] = LAYOUT_iso_90(
         KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_INS,             KC_DEL,
-        _______,  KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,      KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,   KC_BSPC,            KC_PGUP,
-        _______,  KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,      KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,                      KC_PGDN,
-        _______,  KC_CAPS,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,      KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  KC_NUHS,  KC_ENT,             KC_HOME,
-        _______,  KC_LSFT,  KC_NUBS,  KC_Z,     KC_X,     KC_C,     KC_V,      KC_B,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_RSFT,  KC_UP,
+        _______,  KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,      KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     DE_SS,    DE_ACUT,  KC_BSPC,            KC_PGUP,
+        _______,  KC_TAB,   DE_Q,     DE_W,     DE_E,     DE_R,     DE_T,      DE_Z,     DE_U,     DE_I,     DE_O,     DE_P,     DE_UDIA,  DE_PLUS,                      KC_PGDN,
+        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,      DE_H,     DE_J,     DE_K,     DE_L,     DE_ODIA,  DE_ADIA,  DE_HASH,  KC_ENT,             KC_HOME,
+        _______,  KC_LSFT,  DE_LABK,  DE_Y,     DE_X,     DE_C,     DE_V,      DE_B,     DE_B,     DE_N,     DE_M,     KC_COMM,  KC_DOT,   DE_MINS,  KC_RSFT,  KC_UP,
         _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,  MO(WIN_FN),                     KC_SPC,             KC_RALT,                      KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [WIN_FN] = LAYOUT_iso_90(
