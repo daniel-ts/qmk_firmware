@@ -70,21 +70,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [WIN_PROG] = LAYOUT_iso_90(
-        KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,     KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_INS,             KC_DEL,
-        _______,  KC_GRV,   DE_1,     DE_2,     DE_3,     DE_4,     DE_5,      DE_6,     DE_7,     DE_8,     DE_9,     DE_0,     DE_SS,    DE_ACUT,  KC_BSPC,            KC_PGUP,
-        _______,  KC_TAB,   DE_Q,     DE_W,     DE_E,     DE_R,     DE_T,      DE_Z,     DE_U,     DE_I,     DE_O,     DE_P,     DE_BSLS,  DE_PLUS,                      KC_PGDN,
-        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,      DE_H,     DE_J,     DE_K,     DE_L,     DE_LBRC,  DE_RBRC,  DE_HASH,  KC_ENT,             KC_HOME,
-        _______,  KC_LSFT,  DE_LABK,  DE_Y,     DE_X,     DE_C,     DE_V,      DE_B,     DE_B,     DE_N,     DE_M,     DE_COMM,  DE_DOT,   DE_MINS,  KC_RSFT,  KC_UP,
-        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,  MO(WIN_FN),                     KC_SPC,             KC_RALT,                      KC_LEFT,  KC_DOWN,  KC_RGHT),
+        KC_MUTE,  KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,      KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   KC_INS,             KC_DEL,
+        _______,  KC_GRV,   DE_1,     DE_2,     DE_3,     DE_4,     DE_5,       DE_6,     DE_7,     DE_8,     DE_9,     DE_0,     DE_SS,    DE_ACUT,  KC_BSPC,            KC_PGUP,
+        _______,  KC_TAB,   DE_Q,     DE_W,     DE_E,     DE_R,     DE_T,       DE_Z,     DE_U,     DE_I,     DE_O,     DE_P,     DE_BSLS,  DE_PLUS,                      KC_PGDN,
+        _______,  KC_CAPS,  DE_A,     DE_S,     DE_D,     DE_F,     DE_G,       DE_H,     DE_J,     DE_K,     DE_L,     DE_LBRC,  DE_RBRC,  DE_HASH,  KC_ENT,             KC_HOME,
+        _______,  KC_LSFT,  DE_LABK,  DE_Y,     DE_X,     DE_C,     DE_V,       DE_B,     DE_B,     DE_N,     DE_M,     DE_COMM,  DE_DOT,   DE_MINS,  KC_RSFT,  KC_UP,
+        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,   MO(WIN_FN),                     KC_SPC,             KC_RALT,                      KC_LEFT,  KC_DOWN,  KC_RGHT),
 
 
     [WIN_FN] = LAYOUT_iso_90(
-        RM_TOGG,  _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,   RM_VALU,  KC_MPRV,       KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,   KC_VOLU,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,  _______,       _______,  _______,  _______,  _______,   _______,  _______,            _______,
-        _______,  RM_TOGG,  RM_NEXT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_SPDU,   _______,  _______,       _______,  _______,  _______,  _______,   _______,                      _______,
-        _______,  _______,  RM_PREV,   RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  TG(WIN_PROG),  _______,  _______,  _______,  _______,   _______,  _______,            _______,
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,  _______,       NK_TOGG,  _______,  _______,  _______,   _______,  _______,  _______,
-        _______,  _______,  _______,            _______,  _______,  _______,                            _______,            _______,                       _______,  _______,  _______),
+        RM_TOGG,  _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,   RM_VALU,  KC_MPRV,       KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,   KC_VOLU,  KC_PRINT_SCREEN,            _______,
+        RM_TOGG,  _______,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,   RM_VALU,  KC_MPRV,       KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,   KC_VOLU,  _______,                    _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,  _______,       _______,  _______,  _______,  _______,   _______,  _______,                    _______,
+        _______,  RM_TOGG,  RM_NEXT,  RM_VALU,  RM_HUEU,  RM_SATU,  RM_SPDU,   _______,  _______,       _______,  _______,  _______,  DE_UDIA,   _______,                              _______,
+        _______,  _______,  RM_PREV,   RM_VALD,  RM_HUED,  RM_SATD,  RM_SPDD,  _______,  TG(WIN_PROG),  _______,  _______,  DE_ODIA,  DE_ADIA,   _______,  _______,                    _______,
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,  _______,       NK_TOGG,  _______,  _______,  _______,   _______,  _______,           _______,
+        _______,  _______,  _______,            _______,  _______,  _______,                            _______,            _______,                       _______,           _______, _______),
 
 };
 
